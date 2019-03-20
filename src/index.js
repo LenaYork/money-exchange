@@ -1,9 +1,12 @@
 // PLEASE DON'T change function name
 module.exports = function makeExchange(currency) {
-    let result = {};
-    if (currency > 1000) {
-      return error {"You are rich, my friend! We don't have so much money to exchange!"};  //btw not "many money" but "much"! :)
-    } else  let h = Math.floor(currency / 50);
+	
+
+    if (currency > 10000) {
+       return {error: "You are rich, my friend! We don't have so much coins for exchange"};  //btw not "much coins" but "many"! :)
+	} else { 
+	     let result = {};
+	     let h = Math.floor(currency / 50);
 			    if (h > 0) {
 				    result.H = h;
 					currency = currency - (h * 50);
@@ -19,12 +22,14 @@ module.exports = function makeExchange(currency) {
 					   if (n > 0) {
 					           result.N = n;
 						       currency = currency - (n * 5);
-					   }  p = Math.floor(currency / 1);
+					   } let p = Math.floor(currency / 1);
 					      if (p > 0) {
 						       result.P = p;
-                        }
+						}
+						return result;
+					}
       
-     return result;
+    
     // Your code goes here!
     // Return an object containing the minimum number of coins needed to make change
 }
