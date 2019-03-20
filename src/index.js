@@ -2,7 +2,7 @@
 module.exports = function makeExchange(currency) {
     let result = {};
     if (currency > 1000) {
-      return error {"You are rich, my friend! We don't have so much money to exchange!"};
+      return error {"You are rich, my friend! We don't have so much money to exchange!"};  //btw not "many money" but "much"! :)
     } else  let h = Math.floor(currency / 50);
 			    if (h > 0) {
 				    result.H = h;
